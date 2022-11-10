@@ -33,7 +33,7 @@ class Email {
 
         $contenido = "<html>";
         $contenido.="<p><strong>".$this->nombre."</strong> Has creado una nueva cuenta en UpTask,confirmala en el siguiente enlace</p>";
-        $contenido.= "<p>Presiona aquí: <a href='http://localhost:3000/confirmar?token=".$this->token."'>Confimar Cuenta</a></p>";
+        $contenido.= "<p>Presiona aquí: <a href='https://pure-brook-51629.herokuapp.com/confirmar?token=".$this->token."'>Confimar Cuenta</a></p>";
         $contenido.= "<p>Si no creaste esta cuenta,puedes ignorar este mensaje</p>";
         $contenido .="</html>";
         $phpmailer->Body = $contenido;
@@ -57,7 +57,7 @@ class Email {
 
         $contenido = "<html>";
         $contenido.="<p><strong>".$this->nombre."</strong> Te hemos enviado un enlace para recuperar tu contraseña</p>";
-        $contenido.= "<p>Presiona aquí: <a href='http://localhost:3000/restablecer?token=".$this->token."'>Recuperar Cuenta</a></p>";
+        $contenido.= "<p>Presiona aquí: <a href='https://pure-brook-51629.herokuapp.com?token=".$this->token."'>Recuperar Cuenta</a></p>";
         $contenido.= "<p>Si no fuiste el que solicito recuperar tu contraseña,puedes ignorar este mensaje</p>";
         $contenido .="</html>";
         $phpmailer->Body = $contenido;
