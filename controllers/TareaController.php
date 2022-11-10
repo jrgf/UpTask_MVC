@@ -10,8 +10,9 @@ class TareaController{
 
     {  
         session_start();
+        isAuth();
         $proyectoId = $_GET['url'];
-        if(!$proyectoId) header('Location: /dashobard');
+        if(!$proyectoId) header('Location: /dashboard');
         $proyecto = Proyectos::where('url',$proyectoId);
         if(!$proyecto || $proyecto->propietarioId !== $_SESSION['id']){
             header('Location: /404');
